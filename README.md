@@ -1,20 +1,19 @@
 [![License: Apache 2](https://img.shields.io/badge/License-apache2-green.svg)](LICENSE)
-[![Helm Charts](https://github.com/polyaxon/charts/actions/workflows/charts.yml/badge.svg)](https://github.com/polyaxon/charts/actions/workflows/charts.yml)
+[![Helm Charts](https://github.com/cernide/charts/actions/workflows/charts.yml/badge.svg)](https://github.com/cernide/charts/actions/workflows/charts.yml)
 [![Slack](https://img.shields.io/badge/chat-on%20slack-aadada.svg?logo=slack&longCache=true)](https://polyaxon.com/slack/)
 [![Docs](https://img.shields.io/badge/docs-stable-brightgreen.svg?style=flat)](https://polyaxon.com/docs/)
-[![GitHub](https://img.shields.io/badge/issue_tracker-github-blue?logo=github)](https://github.com/polyaxon/polyaxon/issues)
-[![GitHub](https://img.shields.io/badge/roadmap-github-blue?logo=github)](https://github.com/polyaxon/polyaxon/milestones)
+[![GitHub](https://img.shields.io/badge/issue_tracker-github-blue?logo=github)](https://github.com/cernide/cernide/issues)
+[![GitHub](https://img.shields.io/badge/roadmap-github-blue?logo=github)](https://github.com/cernide/cernide/milestones)
 
 # Polyaxon-charts
 
 Polyaxon charts is a set of Helm charts for creating reproducible and maintainable deployments of Polyaxon and it's components with Kubernetes.
 
-This repo includes: 
+This repo includes:
 
- * Helm chart for self-hosted Polyaxon version
- * Helm chart for Polyaxon agent to be deployed with Polyaxon cloud or Polyaxon EE
- * Helm charts for distributed training operators. 
-
+-   Helm chart for self-hosted Polyaxon version
+-   Helm chart for Polyaxon agent to be deployed with Polyaxon cloud or Polyaxon EE
+-   Helm charts for distributed training operators.
 
 ## Install
 
@@ -32,7 +31,7 @@ namespace "polyaxon" created
 
 ### Polyaxon charts repo
 
-You can add the Polyaxon charts repo repository to your helm, so you can install Polyaxon and other charts provided by Polyaxon from it. 
+You can add the Polyaxon charts repo repository to your helm, so you can install Polyaxon and other charts provided by Polyaxon from it.
 This makes it easy to refer to the chart without having to use a long URL each time.
 
 ```bash
@@ -67,11 +66,11 @@ a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) p
 
 It also packages a postgres dependency for Polyaxon (we recommend that you bring your own postgres instance instead of using the built-in subchart):
 
- * [PostgreSQL](https://github.com/kubernetes/charts/tree/master/stable/postgresql)
- 
+-   [PostgreSQL](https://github.com/kubernetes/charts/tree/master/stable/postgresql)
+
 If you deploy the scheduler or deploy our enterprise version you will need Redis (we recommend that you bring your own postgres instance instead of using the built-in subchart):
 
- * [Redis](https://github.com/kubernetes/charts/tree/master/stable/redis)
+-   [Redis](https://github.com/kubernetes/charts/tree/master/stable/redis)
 
 ## Uninstalling the Chart
 

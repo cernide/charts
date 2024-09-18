@@ -66,4 +66,4 @@ polyaxon login -u travis -p travis | grep success
 echo "cli create project"
 polyaxon project create --name=travis-test --description='Travis testing' | grep success
 echo "cli init project"
-polyaxon project -p travis-test git --url=https://github.com/polyaxon/polyaxon-quick-start | grep success
+polyaxon project -p travis-test git --url=https://github.com/cernide/cernide-quick-start | grep success

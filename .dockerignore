@@ -13,7 +13,6 @@ celerybeat-schedule*
 .cache/
 data/
 logs/
-config/
 htmlcov/
 tests_report/
 .tox/
