@@ -39,7 +39,6 @@ spec:
         image: "{{ .Values.agent.image }}:{{ .Values.agent.imageTag }}"
         imagePullPolicy: {{ .Values.agent.imagePullPolicy }}
 {{ include "securityContext.container" . | indent 8 }}
-        args: ["start"]
         envFrom:
 {{ include "config.envFrom.common" . | indent 8 }}
 {{ include "config.envFrom.agent" . | indent 8 }}
@@ -49,7 +48,7 @@ spec:
 {{- if .Values.agent.enableHealthChecks }}
         livenessProbe:
           exec:
-            command: ["/bin/bash", "./entrypoint.sh", "healthz"]
+            command: ["polyaxon", "agent", "healthz"]
           initialDelaySeconds: 20
           periodSeconds: 20
           successThreshold: 1
@@ -57,7 +56,7 @@ spec:
           timeoutSeconds: 10
         readinessProbe:
           exec:
-            command: ["/bin/bash", "./entrypoint.sh", "healthz"]
+            command: ["polyaxon", "agent", "healthz"]
           initialDelaySeconds: 20
           periodSeconds: 20
           successThreshold: 1
