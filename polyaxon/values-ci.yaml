@@ -1,0 +1,44 @@
+rbac:
+  enabled: false
+
+ingress:
+  enabled: false
+
+gateway:
+  resources:
+    requests:
+      memory: 160Mi
+      cpu: 1000m
+  service:
+    type: NodePort
+
+user:
+  username: travis
+  password: travis
+
+postgresql:
+  resources:
+    requests:
+      memory: 40Mi
+      cpu: 20m
+
+artifactsStore:
+  name: test
+  kind: host_path
+  schema:
+    mountPath: "/tmp/artifacts"
+    hostPath: "/tmp/artifacts"
+
+connections:
+- name: foo
+  kind: host_path
+  schema:
+    mountPath: "/tmp/foo"
+    hostPath: "/tmp/foo"
+- name: bar
+  kind: host_path
+  schema:
+    mountPath: "/tmp/bar"
+    hostPath: "/tmp/bar"
+
+environment: testing
